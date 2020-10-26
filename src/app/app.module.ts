@@ -3,15 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenubreakfastComponent } from './menubreakfast/menubreakfast.component';
-//import { DataService } from './data.service';
+import { MenuComponent } from './menu/menu.component';
 import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenubreakfastComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,

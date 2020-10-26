@@ -71,7 +71,8 @@
             "id": "m7",
             "type": "lunch",
             "name": "fries",
-            "price":  5
+            "price":  5,
+            "image": "/assets/images/frances-fritas.svg"
         },
         {
             "id": "m8",
