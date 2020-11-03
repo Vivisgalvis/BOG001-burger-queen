@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
 import {HttpClientModule} from '@angular/common/http';
+import { selectRoleComponent } from './selectRole/selectRole.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    selectRoleComponent
   ],
   imports: [
     BrowserModule,
