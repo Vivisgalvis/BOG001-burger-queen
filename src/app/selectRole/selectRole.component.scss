@@ -71,18 +71,19 @@ main{
     color: #000000;
     font-family: 'Risque', cursive;
     font-size: 38px;
+    padding-left: 65px;
     cursor:pointer;
 }
 #buttonWaiter{
     background-image: url(../../assets/images/waiter.png);
     background-repeat: no-repeat;
-    background-position-x: 15%;
+    background-position-x: 25%;
     background-position-y: center;
 }
 #buttonChef{
     background-image: url(../../assets/images/chef.png);
     background-repeat: no-repeat;
-    background-position-x: 15%;
+    background-position-x: 25%;
     background-position-y: center;
 
 }
