@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { createOrderComponent} from './waiter/createOrder/createOrder.component';
 import { selectRoleComponent } from './selectRole/selectRole.component';
 
 const routes: Routes = [
@@ -8,9 +7,10 @@ const routes: Routes = [
     component:selectRoleComponent,
   },
   {
-    path:'createOrder',
-    component:createOrderComponent,
+    path:'Waiter',
+    loadChildren: './modules/waiter/waiter.module#waiterModule' //aquí vamos enrutando . Lazy Loading 
   }
+  
 ];
 
 @NgModule({
