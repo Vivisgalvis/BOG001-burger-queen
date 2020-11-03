@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {MenuComponent} from './menu/menu.component';
+import { createOrderComponent} from './waiter/createOrder/createOrder.component';
+import { selectRoleComponent } from './selectRole/selectRole.component';
 
 const routes: Routes = [
+  { path:'',
+    component:selectRoleComponent,
+  },
   {
-    path:"",
-    component:MenuComponent,
+    path:'createOrder',
+    component:createOrderComponent,
   }
 ];
 
