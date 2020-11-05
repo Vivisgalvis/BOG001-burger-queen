@@ -7,8 +7,8 @@ const routes: Routes = [
     component:selectRoleComponent,
   },
   {
-    path:'Waiter',
-    loadChildren: () => import ('./waiter/waiter-routing.module').then(any=>any) //aquí vamos enrutando . Lazy Loading 
+    path:'waiter',
+    loadChildren: () => import ('./waiter/waiter-routing.module').then(m => m.WaiterRoutingModule) //aquí vamos enrutando . Lazy Loading 
   }
   
 ];
