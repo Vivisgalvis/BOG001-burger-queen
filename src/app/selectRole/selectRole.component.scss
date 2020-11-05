@@ -74,6 +74,10 @@ main{
     padding-left: 65px;
     cursor:pointer;
 }
+.buttons > a{
+    text-decoration: none;
+    color: black;
+}
 #buttonWaiter{
     background-image: url(../../assets/images/waiter.png);
     background-repeat: no-repeat;
