@@ -71,8 +71,12 @@ main{
     color: #000000;
     font-family: 'Risque', cursive;
     font-size: 38px;
-    padding-left: 65PX;
+    padding-left: 65px;
     cursor:pointer;
+}
+.buttons > a{
+    text-decoration: none;
+    color: black;
 }
 #buttonWaiter{
     background-image: url(../../assets/images/waiter.png);
