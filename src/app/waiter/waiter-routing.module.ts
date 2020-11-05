@@ -1,22 +1,18 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SelectTableComponent } from './selectTable/select-table.component';
 import { createOrderComponent} from './createOrder/createOrder.component';
 
 const routes: Routes = [
   {
-    path:'createOrder',
-    component:createOrderComponent,
-    children: [// creación de las rutas hijas del modulo de waiter para cuando le demos click al boton
-      {
-        path: "",
-        redirectTo: 'waiter-child',
-        pathMatch: 'full'
-      },
-      {
-        path: 'waiter-child',
-        loadChildren: './modules/waiter/child/child.module#ChildModule'
-      }
+    path:'',
+    component:SelectTableComponent,
+    children: [
+      path: 'createOrder',
+      Component:createOrderComponent,
+
     ]
+    // creación de las rutas hijas del modulo de waiter para cuando le demos click al boton
   }
 ];
 
@@ -25,3 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class WaiterRoutingModule { }
+

@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-selectRole',
   templateUrl: './selectRole.component.html',
   styleUrls: ['./selectRole.component.scss']
 })
-export class selectRoleComponent implements OnInit {
+export class selectRoleComponent  {
 
+  
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  
 
 }
