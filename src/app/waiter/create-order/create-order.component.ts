@@ -7,11 +7,11 @@ import { DataService } from '../../data.service';
 }*/
 
 @Component({
-  selector: 'app-createOrder',
-  templateUrl: './createOrder.component.html',
-  styleUrls: ['./createOrder.component.scss']
+  selector: 'app-create-order',
+  templateUrl: './create-order.component.html',
+  styleUrls: ['./create-order.component.scss']
 })
-export class createOrderComponent implements OnInit {
+export class CreateOrderComponent implements OnInit {
 
 
 
@@ -36,10 +36,4 @@ export class createOrderComponent implements OnInit {
   }
 
 }
-
-
-
-
-  
-
 
