@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path:'waiter',
-    loadChildren: () => import ('./waiter/waiter-routing.module').then(m => m.WaiterRoutingModule) //aquí vamos enrutando . Lazy Loading 
+    loadChildren: () => import ('./waiter/waiter.module').then(m => m.WaiterModule) //aquí vamos enrutando . Lazy Loading 
   }
   
 ];
