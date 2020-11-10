@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-select-table',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-table.component.scss']
 })
 export class SelectTableComponent implements OnInit {
+  dinerForm;
+  
 
-  constructor() { }
-
-  ngOnInit(): void {
+  
+  constructor(
+    public formBuilder: FormBuilder,
+  ) { 
+    this.dinerForm = this.formBuilder.group({
+      name: '',
   }
+
+  ngOnInit(a,b) {
+  }
+  
 
 }
