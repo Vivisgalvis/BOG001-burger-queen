@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { SelectTableComponent } from './select-table/select-table.component';
@@ -23,3 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class WaiterRoutingModule { }
+
