@@ -42,12 +42,12 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    width:100vw ;
+    width:500px;
+    margin: auto;
 }
 
 .tableSelect{
-    width: 45%;
+    width: 100%;
     height: 80px;
     border-radius: 25px;
     border: 3px solid #000000;
@@ -63,7 +63,7 @@ main{
 }
 
 .form-control{
-    width: 45%;
+    width: 100%;
     height: 80px;
     border-radius: 25px;
     border: 3px solid #000000;
@@ -74,7 +74,7 @@ main{
     font-size: 38px;
     padding-left: 65px;
     cursor:pointer;
-
+    box-sizing: border-box;
 }
 
 .buttonsForm{
