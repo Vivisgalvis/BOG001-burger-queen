@@ -9,8 +9,8 @@
       <form formGroup="dinnerForm" (ngSubmit)="onSubmit()">
       <div class= "formContainer">
         <label class="numberTable" > </label>
-        <select class= "tableSelect" name = "table" formControlName="tables" >
-         <option [value]=" " selected disabled>Select Table</option> 
+        <select class= "tableSelect" name = "table" formControlName="selectTables" >
+         <option value=" " selected disabled>Select Table</option> 
           <option [value]="item" *ngFor="let item of  tables">{{item}}</option>
         </select>
         

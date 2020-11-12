@@ -19,6 +19,9 @@ export class SelectTableComponent implements OnInit {
   }
   createForm(){
     this.dinnerForm = this.formBuilder.group({
+      selectTables:[''],
+      name:'',
+      
     });
   }
   ngOnInit():void {; 
