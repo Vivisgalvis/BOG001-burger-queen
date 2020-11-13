@@ -6,27 +6,27 @@
             </div>
         </div>
 
-      <form formGroup="dinnerForm" (ngSubmit)="onSubmit()">
+
+      <form [formGroup] ="dinnerForm">
+
       <div class= "formContainer">
-        <label class="numberTable" > </label>
-        <select class= "tableSelect" name = "table" formControlName="tables" >
-         <option [value]=" " selected disabled>Select Table</option> 
+
+        <input class="form-control" formControlName="name" placeholder="Name Diner" >
+        
+        <select class= "tableSelect" name = "table" formControlName="selectTables" >
+         <option value="" selected disabled>Select Table</option> 
           <option [value]="item" *ngFor="let item of  tables">{{item}}</option>
         </select>
         
-        <label class= "nameDinner "for="name">
-        </label>
-        <input class="form-control" formControlName="name" placeholder="Name Diner" >
       </div>
 
       <div class = "buttonsForm">
-        <button class="buttons" id=buttonBreakfast type="submit">Breakfast</button>
-        <button class="buttons" id=buttonLunch type="submit">Lunch / Dinner</button>
+        <div><button class="buttons" (click) = "onSubmit()" id= "buttonBreakfast" type="button">Breakfast</button></div>
+        <div><button class="buttons" (click) = "onSubmit()" id= "buttonLunch" type="button">Lunch</button></div>
       </div>
-          
-
+       
             
-          
+      
       </form>
     </div>
    
