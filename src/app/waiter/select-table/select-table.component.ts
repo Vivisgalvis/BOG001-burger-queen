@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./select-table.component.scss']
 })
 
+
 export class SelectTableComponent implements OnInit {
- 
   tables:string[]= ["# 1","# 2","# 3","# 4","# 5"]  // se crea un array para generar un select dinámico
   dinnerForm: FormGroup;
 
@@ -25,6 +25,7 @@ export class SelectTableComponent implements OnInit {
       name:'',
     });
   }
+  
   ngOnInit():void {
   }
   
@@ -33,6 +34,7 @@ export class SelectTableComponent implements OnInit {
     let infoTable = this.dinnerForm.value
     console.log("Your order has been submitted", infoTable);
     this.router.navigate(['/waiter/create-order', infoTable]);
+
     }
 }
 
