@@ -11,7 +11,7 @@
 
       <div class= "formContainer">
 
-        <input class="form-control" formControlName="name" placeholder="Name Diner" >
+        <input placeholder="Name Diner" formControlName="name">
         
         <select class= "tableSelect" name = "table" formControlName="selectTables" >
          <option value="" selected disabled>Select Table</option> 
@@ -21,8 +21,8 @@
       </div>
 
       <div class = "buttonsForm">
-        <div><button class="buttons" (click) = "onSubmit()" id= "buttonBreakfast" type="button">Breakfast</button></div>
-        <div><button class="buttons" (click) = "onSubmit()" id= "buttonLunch" type="button">Lunch</button></div>
+        <button (click) = "onSubmit()" id= "buttonBreakfast" type="button">Breakfast</button>
+        <button (click) = "onSubmit()" id= "buttonLunch" type="button">Lunch</button>
       </div>
        
             
