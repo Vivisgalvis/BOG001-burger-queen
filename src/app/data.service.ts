@@ -8,8 +8,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getData(url:string){
-    return this.http.get(url);
-
+  getData(){
+    return this.http.get('https://raw.githubusercontent.com/ljohanaalvarez/BOG001-burger-queen/master/src/app/data.json');
   }
 }
