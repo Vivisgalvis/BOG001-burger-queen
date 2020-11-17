@@ -1,3 +1,8 @@
+$color-orange:#FF9F00;
+$color-black:#000000;
+$color-red:#D0021B;
+$color-white: #FFFFFF;
+
 main{
     display: flex;
     width: 100%;
@@ -19,7 +24,6 @@ main{
     rgba(255, 255, 255, 0.425)); 
     z-index: -1; 
 }
-
 .headerContainer{
     display: flex;
     align-items: center;
@@ -31,49 +35,43 @@ main{
 .logoContainer{
     display: flex;
     justify-content: center;
-    width: 90%;
-    
+    width: 90%;   
 }
 /* Vista de Select Table*/
-
 .formContainer{
     display: flex;
     align-items: center;
     flex-direction: column;
     width:500px;
     margin: auto;
+    select{
+        width: 100%;
+        height: 80px;
+        border-radius: 25px;
+        border: 3px solid $color-black;
+        margin-top:51px ;
+        background-color: $color-white;
+        color: $color-black;
+        font-family: 'Risque', cursive;
+        font-size: 38px;
+        padding-left: 65px;
+        cursor:pointer;
+    }
+    input{
+        width: 100%;
+        height: 80px;
+        border-radius: 25px;
+        border: 3px solid $color-black;
+        margin-top:51px ;
+        background-color: $color-white;
+        color: $color-black;
+        font-family: 'Risque', cursive;
+        font-size: 38px;
+        padding-left: 65px;
+        cursor:pointer;
+        box-sizing: border-box;
+    }
 }
-
-.tableSelect{
-    width: 100%;
-    height: 80px;
-    border-radius: 25px;
-    border: 3px solid #000000;
-    margin-top:51px ;
-    background-color: #FFFFFF;
-    color: #000000;
-    font-family: 'Risque', cursive;
-    font-size: 38px;
-    padding-left: 65px;
-    cursor:pointer;
-}
-
-.form-control{
-    width: 100%;
-    height: 80px;
-    border-radius: 25px;
-    border: 3px solid #000000;
-    margin-top:51px ;
-    background-color: #FFFFFF;
-    color: #000000;
-    font-family: 'Risque', cursive;
-    font-size: 38px;
-    padding-left: 65px;
-    cursor:pointer;
-    box-sizing: border-box;
-
-}
-
 .buttonsForm{
     display: flex;
     justify-content: space-between;
@@ -81,35 +79,35 @@ main{
     width: 500px;
     height: 50%;
     margin: auto; 
+    div{
+        width:200px;
+    }
+    button{
+        width: 200px;
+        height: 93px;
+        border-radius: 25px;
+        border: 3px solid $color-black;
+        margin-top:51px ;
+        background-color: $color-orange;
+        color: $color-black;
+        font-family: 'Risque', cursive;
+        font-size: 30px;
+        padding-left: 62px;
+        cursor:pointer;
+    }
 }
-.buttonsForm > div{
-    width:200px;
-}
-.buttons{
-    width: 200px;
-    height: 93px;
-    border-radius: 25px;
-    border: 3px solid #000000;
-    margin-top:51px ;
-    background-color: #FF9F00;
-    color: #000000;
-    font-family: 'Risque', cursive;
-    font-size: 30px;
-    padding-left: 62px;
-    cursor:pointer;
-}
-#buttonBreakfast{
-    background-image: url(../../../assets/images/coffe.png);
+%buttons{
     background-repeat: no-repeat;
     background-position-x: 14%;
     background-position-y: center;
+}
+#buttonBreakfast{
+    @extend%buttons;
+    background-image: url(../../../assets/images/coffe.png);
     background-size: 20%;
 }
 #buttonLunch{
+    @extend%buttons;
     background-image: url(../../../assets/images/Hamburger.svg);
-    background-repeat: no-repeat;
-    background-position-x: 14%;
-    background-position-y: center;
     background-size: 27%;
-
 }

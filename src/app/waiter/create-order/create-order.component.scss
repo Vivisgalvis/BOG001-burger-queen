@@ -1,14 +1,17 @@
+$color-orange:#FF9F00;
+$color-black:#000000;
+$color-red:#D0021B;
+$color-white: #FFFFFF;
+
 main{
     display: flex;
     width: 100%;
     height: 100%;  
 }
-
 .container{
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    margin-top: 5%;
+    margin-top: 2%;
     width: 100%;
     height: 80%;
 }
@@ -22,15 +25,60 @@ main{
 }
 .headerContainer{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height:310px;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 90%;
+    height:210px;
 }
 .logoContainer{
     display: flex;
     justify-content: center;
-    width: 300px;
-    height: 250px;
+    width: 120px;
+    height: 111px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+%paragraphInputs{
+    position: absolute;
+    font-size: 40px;
+    top:45px;
+    left: 150px;
+}
+#inputTable{
+    position: relative;
+    p{
+        @extend%paragraphInputs;        
+    }    
+}
+
+#inputUser{
+    position: relative;
+    p{
+        @extend%paragraphInputs;        
+        
+    }    
+}
+#backArrowContainer{
+    display: flex;
+    align-items: center; 
+    height: 130px;
+    margin-right: 10px;
+    button{
+        background-image: url(../../../assets/images/backArrow.svg);
+        width: 57px;
+        height: 57px;
+        background-color: rgba(240, 248, 255, 0);
+        border-color: rgba(240, 248, 255, 0);
+        background-repeat: no-repeat;
+        background-size: 97%; 
+        a{
+            list-style: none;
+            color:rgba(128, 128, 128, 0);
+            font-size: 20px;
+        }
+    }   
 }

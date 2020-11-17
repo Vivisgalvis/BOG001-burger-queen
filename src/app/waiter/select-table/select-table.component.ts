@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 
 export class SelectTableComponent implements OnInit {
  
-  tables:string[]= ["Table 1","Table 2","Table 3","Table 4","Table 5"]  // se crea un array para generar un select dinámico
+  tables:string[]= ["# 1","# 2","# 3","# 4","# 5"]  // se crea un array para generar un select dinámico
   dinnerForm: FormGroup;
 
   constructor(
@@ -25,7 +25,7 @@ export class SelectTableComponent implements OnInit {
       name:'',
     });
   }
-  ngOnInit():void {; 
+  ngOnInit():void {
   }
   
   onSubmit() {
