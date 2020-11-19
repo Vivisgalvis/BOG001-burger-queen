@@ -11,6 +11,7 @@ main{
 .container{
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     margin-top: 2%;
     width: 100%;
     height: 80%;
@@ -25,12 +26,30 @@ main{
 }
 .headerContainer{
     display: flex;
-    align-items: flex-start;
+    //align-items: flex-start;
     flex-direction: row;
     justify-content: space-around;
-    align-items: baseline;
-    width: 90%;
-    height:210px;
+    width: 100%;
+    height:190px;
+    position:fixed;
+    top: 20px;
+    
+    button{
+        background-image: url(../../../assets/images/backArrow.svg);
+        width: 57px;
+        height: 57px;
+        background-color: rgba(240, 248, 255, 0);
+        border-color: rgba(240, 248, 255, 0);
+        background-repeat: no-repeat;
+        background-size: 97%; 
+        margin-top: 40px;
+        
+        a{
+            list-style: none;
+            color:rgba(128, 128, 128, 0);
+            font-size: 20px;
+        }
+    }   
 }
 .logoContainer{
     display: flex;
@@ -62,23 +81,7 @@ main{
         
     }    
 }
-#backArrowContainer{
-    display: flex;
-    align-items: center; 
-    height: 130px;
-    margin-right: 10px;
-    button{
-        background-image: url(../../../assets/images/backArrow.svg);
-        width: 57px;
-        height: 57px;
-        background-color: rgba(240, 248, 255, 0);
-        border-color: rgba(240, 248, 255, 0);
-        background-repeat: no-repeat;
-        background-size: 97%; 
-        a{
-            list-style: none;
-            color:rgba(128, 128, 128, 0);
-            font-size: 20px;
-        }
-    }   
+#orderItem{
+    margin-top: 150px;
 }
+

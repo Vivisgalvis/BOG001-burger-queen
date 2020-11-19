@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../data.service';
+//import { DataService } from '../../data.service';
 import { ActivatedRoute} from '@angular/router';
-import { Menu } from 'src/app/interfaces/menu';
+//import { Menu } from 'src/app/interfaces/menu';
 
 @Component({
   selector: 'app-create-order',
@@ -12,12 +12,12 @@ export class CreateOrderComponent implements OnInit {
 
   numberTable: string;
   nameDiner: string;
-  data:Menu;
+ // data:Menu;
 
   /* aquí obtenemos el JSON desde la url de github usando raw, luego usamos subscribe y se obtiene la respuesta (res de tipo any) y 
   la guardamos en una constante llamada data */
   constructor(
-    private dataService: DataService,
+    //private dataService: DataService,
     private route: ActivatedRoute,
     ){    
   }
@@ -28,7 +28,7 @@ export class CreateOrderComponent implements OnInit {
 
     console.log(this.numberTable, this.nameDiner);
 
-    this.dataService.getData()
+    /*this.dataService.getData()
     .subscribe((res:Menu) => {
       this.data =res;
     //Vamos a recorrer la data
@@ -38,7 +38,7 @@ export class CreateOrderComponent implements OnInit {
       res.menu.forEach(element => {
         console.log(element.name); 
       });   
-    });
+    });*/
 
   }
 

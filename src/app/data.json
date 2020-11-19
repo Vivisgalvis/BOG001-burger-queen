@@ -6,7 +6,7 @@
             "type": "breakfast",
             "name": "american coffee",
             "price": 5 ,
-            "image": "https://github.com/ljohanaalvarez/BOG001-burger-queen/blob/createOrder/src/assets/images/sandwichB.png"
+            "image": "/assets/images/coffeeBreakfast.png"
         },
         {
             "id": "m2",
@@ -76,7 +76,7 @@
         {
             "id": "m7",
             "type": "lunch",
-            "image": "/assets/images/frances-fritas.svg",
+            "image": "/assets/images/friesLunch.png",
             "name": "fries",
             "price":  5
             
