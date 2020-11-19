@@ -18,8 +18,15 @@
             <button type="button" id="backArrow"> 
                 <a routerLink = "/waiter/select-table">Back</a>
             </button>
-            
-        </div>     
+         </div>   
+        
+         <div class="breakfast"> 
+            <div *ngFor = "let product of data?.menu" > <!--El signo ? indica que espera que se cargue la data para ejecutar el for es como un await--> 
+               <div>{{product.name}}</div>
+            </div>
+           
+         </div>
     </div>
+
 </main>
 
