@@ -23,6 +23,7 @@
          <div class="breakfast"> 
             <div *ngFor = "let product of data?.menu" > <!--El signo ? indica que espera que se cargue la data para ejecutar el for es como un await--> 
                <div>{{product.name}}</div>
+               <div>{{product.image}}</div>
             </div>
            
          </div>

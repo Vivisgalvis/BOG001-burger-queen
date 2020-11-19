@@ -6,7 +6,7 @@
             "type": "breakfast",
             "name": "american coffee",
             "price": 5 ,
-            "image": "/assets/images/coffeB.png"
+            "image": "https://github.com/ljohanaalvarez/BOG001-burger-queen/blob/createOrder/src/assets/images/sandwichB.png"
         },
         {
             "id": "m2",
