@@ -1,5 +1,6 @@
 <main>
     <div class="overline"></div>
+    
     <div class="container">
         <div class="headerContainer">
             <div class="logoContainer">
@@ -12,20 +13,18 @@
             <div id="inputUser">
                 <img src="../../../assets/images/inputUser.png" alt="">
                 <p>{{nameDiner}}</p>
-            </div>           
-        </div>  
-        <div id="backArrowContainer">
+            </div> 
+            
             <button type="button" id="backArrow"> 
                 <a routerLink = "/waiter/select-table">Back</a>
             </button>
-         </div>   
+                     
+        </div>  
+       
+        <div id="orderItem"><app-create-order-item></app-create-order-item></div>
+
         
-         <div class="breakfast"> 
-            <div *ngFor = "let product of data?.menu" > <!--El signo ? indica que espera que se cargue la data para ejecutar el for es como un await--> 
-               <div>{{product.name}}</div>
-            </div>
-           
-         </div>
+         
     </div>
 
 </main>

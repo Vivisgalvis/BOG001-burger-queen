@@ -6,7 +6,7 @@
             "type": "breakfast",
             "name": "american coffee",
             "price": 5 ,
-            "image": "/assets/images/coffeB.png"
+            "image": "/assets/images/coffeeBreakfast.png"
         },
         {
             "id": "m2",
@@ -32,7 +32,7 @@
         {
             "id": "m5",
             "type": "lunch",
-            "image":"/assets/images/simpleBurguer.svg",
+            "image":"/assets/images/simpleBurguer.png",
             "name": "simple burquer",
             "price": 10,
             "Additions":[
@@ -54,7 +54,7 @@
         {
             "id": "m6",
             "type": "lunch",
-            "image": "/assets/images/doubleBurguer.svg",
+            "image": "/assets/images/doubleBurguer.png",
             "name": "double burquer",
             "price": 15,
             "Additions":[
@@ -76,7 +76,7 @@
         {
             "id": "m7",
             "type": "lunch",
-            "image": "/assets/images/frances-fritas.svg",
+            "image": "/assets/images/friesLunch.png",
             "name": "fries",
             "price":  5
             
@@ -84,21 +84,21 @@
         {
             "id": "m8",
             "type": "lunch",
-            "image": "/assets/images/oninonRings.svg",
+            "image": "/assets/images/onionRings.png",
             "name": "onion rings",
             "price": 5
         },
         {
             "id": "m9",
             "type": "lunch",
-            "image":"/assets/images/water500ml.svg",
+            "image":"/assets/images/water.png",
             "name": "water 500ml",
             "price": 5
         },
         {
             "id": "m10",
             "type": "lunch",
-            "image":"/assets/images/water750ml.svg",
+            "image":"/assets/images/water.png",
             "name": "water 750ml",
             "price": 7
         },

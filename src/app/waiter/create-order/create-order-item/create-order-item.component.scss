@@ -1,0 +1,23 @@
+$color-orange:#FF9F00;
+$color-black:#000000;
+$color-red:#D0021B;
+
+.breakfast{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin-top:250px;
+    margin-left: 60px;
+    width: 512px;
+}
+.productTarget{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    border: $color-black solid 3px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    background-color:$color-orange;
+}

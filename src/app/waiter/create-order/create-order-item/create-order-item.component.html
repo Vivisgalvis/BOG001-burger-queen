@@ -1,0 +1,11 @@
+<img src="/src/assets/images/chef.png" alt="">
+<div class="breakfast"> 
+    <div *ngFor = "let product of data?.menu" class="productTarget" > <!--El signo ? indica que espera que se cargue la data para ejecutar el for es como un await--> 
+      <img src="{{product.image}}" alt="">
+      <span>{{product.name}}</span>
+      <p>$ {{product.price}}</p>
+       
+       
+    </div>
+   
+ </div>
