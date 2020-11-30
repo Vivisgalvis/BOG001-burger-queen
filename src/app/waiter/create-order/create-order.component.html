@@ -21,8 +21,7 @@
                      
         </div>  
        
-        <div id="orderItem"><app-create-order-item></app-create-order-item></div>
-
+        <div id="orderItem"><app-create-order-item [typeItem]="type"></app-create-order-item></div> <!--Estamos trayendo los elementos del hijo al padre y lo que esta entre [] es el nombre de la variable en hijo a la que le queremos asignar el valor de type que existe en padre -->
         
          
     </div>
