@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { from } from 'rxjs';
 import { DataService } from 'src/app/data.service';
 import { Menu } from 'src/app/interfaces/menu';
@@ -11,6 +11,8 @@ import { Menu } from 'src/app/interfaces/menu';
 })
 export class CreateOrderItemComponent implements OnInit {
   data:Menu;
+  @Input()typeItem: string; // el input es para pasar datos del papa al hijo. Estamos llamando Type
+
 
   constructor(
     private dataService: DataService,
@@ -19,6 +21,7 @@ export class CreateOrderItemComponent implements OnInit {
 
   ngOnInit(): void {
 
+    console.log(this.typeItem)
     this.dataService.getData()
     .subscribe((res:Menu) => {
       this.data =res;
