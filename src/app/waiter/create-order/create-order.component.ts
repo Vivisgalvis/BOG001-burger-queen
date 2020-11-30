@@ -12,6 +12,7 @@ export class CreateOrderComponent implements OnInit {
 
   numberTable: string;
   nameDiner: string;
+  type: string;
  // data:Menu;
 
   /* aquí obtenemos el JSON desde la url de github usando raw, luego usamos subscribe y se obtiene la respuesta (res de tipo any) y 
@@ -26,6 +27,11 @@ export class CreateOrderComponent implements OnInit {
     this.numberTable = this.route.snapshot.paramMap.get('selectTables');
     this.nameDiner = this.route.snapshot.paramMap.get('name');
 
+    if(this.type === "breakfast"){
+      console.log("estamos en breakfast")
+    }else{
+      console.log("estamos en lunch")
+    }
     console.log(this.numberTable, this.nameDiner);
 
     /*this.dataService.getData()

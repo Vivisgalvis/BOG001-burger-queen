@@ -29,9 +29,11 @@ export class SelectTableComponent implements OnInit {
   ngOnInit():void {
   }
   
-  onSubmit() {
+  onSubmit(type) {
     // Process checkout data here
+    console.log(type)
     let infoTable = this.dinnerForm.value
+    infoTable ["type"] = "breakfast"
     console.log("Your order has been submitted", infoTable);
     this.router.navigate(['/waiter/create-order', infoTable]);
 
