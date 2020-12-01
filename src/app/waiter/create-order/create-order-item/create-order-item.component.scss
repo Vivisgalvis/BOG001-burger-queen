@@ -4,11 +4,11 @@ $color-red:#D0021B;
 
 .breakfast{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: row wrap;
-    margin-top:250px;
+    margin-top:170px;
     margin-left: 60px;
-    width: 512px;
+    width: 480px;
 }
 .productTarget{
     display: flex;
@@ -19,5 +19,6 @@ $color-red:#D0021B;
     border: $color-black solid 3px;
     border-radius: 25px;
     margin-bottom: 10px;
+    margin-left: 10px;
     background-color:$color-orange;
 }

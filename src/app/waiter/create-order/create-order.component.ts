@@ -29,10 +29,10 @@ export class CreateOrderComponent implements OnInit {
     this.type = this.route.snapshot.paramMap.get('type');
     
    // En este if estamos condicionando que data colocar dependiento del boton que elijamos 
-    if(this.type === "breakfast"){
+    if(this.type === 'breakfast'){
       console.log("estamos en breakfast")
     }else{
-      this.type === "lunch";
+      this.type === 'lunch';
       console.log("estamos en lunch")
     }
     console.log(this.numberTable, this.nameDiner);

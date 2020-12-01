@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { from } from 'rxjs';
+
 import { DataService } from 'src/app/data.service';
 import { Menu } from 'src/app/interfaces/menu';
 //import { CreateOrderComponent } from '../create-order.component';
@@ -11,6 +11,7 @@ import { Menu } from 'src/app/interfaces/menu';
 })
 export class CreateOrderItemComponent implements OnInit {
   data:Menu;
+  typefood:string;
   @Input()typeItem: string; // el input es para pasar datos del papa al hijo. Estamos llamando Type
 
 
@@ -25,14 +26,18 @@ export class CreateOrderItemComponent implements OnInit {
     this.dataService.getData()
     .subscribe((res:Menu) => {
       this.data =res;
+      this.data.menu.forEach(element => {
+        this.typefood = element.typeFood;
+        console.log(element.name, element.typeFood); 
+      });   
     //Vamos a recorrer la data
+      console.log(this.data);
       console.log(this.data);
       console.log(typeof(res));
       //data.menu se esta trayendo la data del json 
-      res.menu.forEach(element => {
-        console.log(element.name); 
-      });   
+      
     });
+    
   }
 
 }
