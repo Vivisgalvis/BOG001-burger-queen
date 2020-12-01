@@ -1,0 +1,44 @@
+$color-orange:#FF9F00;
+$color-black:#000000;
+$color-mediumOrange:#FBA658; 
+
+#containerSummary{
+background-color:#fba758ab;
+width:375px;
+height:565px;
+border: $color-black solid 3px;
+border-radius:25px;
+margin-top:230px;   
+    #footSummary{
+        display: flex;
+        justify-content: space-around;// space beteewn encia los elementos a una esquina a cada uno . Y el space around pone un espacio entre los hijos
+        width:100%;
+        height:70px;
+        button{
+            width:140px;
+            height:45px;
+            background-color:$color-orange;
+            border-radius:15px;
+            font-size:25px;
+        }
+        span{
+            display:flex;
+            justify-content:flex-end;
+            width: 160px;
+            height:45px;
+            font-size:25px;
+            p{
+                width:80px;
+                height:30px;
+                background-color:#ffff;
+                font-size:25px;
+                margin-left:3px;
+                text-align:center;
+                border-radius:15px;
+            }
+            
+
+        }
+    }
+}
+

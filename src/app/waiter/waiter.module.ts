@@ -6,13 +6,14 @@ import { CreateOrderComponent } from './create-order/create-order.component';
 import { ReactiveFormsModule,} from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { CreateOrderItemComponent } from './create-order/create-order-item/create-order-item.component';
+import { OrderSummaryComponentComponent } from './create-order/order-summary-component/order-summary-component.component';
 
 @Injectable({
   providedIn: 'root'
 })
 
 @NgModule({
-  declarations: [SelectTableComponent, CreateOrderComponent, CreateOrderItemComponent],
+  declarations: [SelectTableComponent, CreateOrderComponent, CreateOrderItemComponent, OrderSummaryComponentComponent],
   imports: [
     CommonModule,
     WaiterRoutingModule,
