@@ -7,9 +7,6 @@ import { Component, Output } from '@angular/core';
 })
 export class selectRoleComponent  {
 
-  
   constructor() { }
-
-  
 
 }
