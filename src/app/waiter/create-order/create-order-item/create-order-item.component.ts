@@ -18,7 +18,8 @@ export class CreateOrderItemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    /*llamamos al servicio dataService y utilizamos subscribe (para suscribirnos a él) y tener la data disponible*/
+    /*llamamos al servicio dataService y utilizamos subscribe (para suscribirnos a él) y tener la información del json 
+    disponible la cual guardamos en una variable llamada data.*/
 
     this.dataService.getData()
     .subscribe((res:Menu) => {
