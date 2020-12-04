@@ -6,6 +6,10 @@
                 <p>{{item.add}}</p>
                 <p>{{item.price}}</p>
             </div>
+            <div *ngFor = "let item of product.options" class="productTarget">
+                <img src="{{item.image}}" alt="">
+                <p>{{item.option}}</p>
+            </div>
             
         </div>
         <div class="modalbox resize">
