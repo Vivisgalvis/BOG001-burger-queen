@@ -2,7 +2,8 @@
     <div class="modal">
         <div *ngFor = "let product of data?.menu">
             <div *ngFor = "let item of product.Additions" class="productTarget">
-                <p>{{item.name}}</p>
+                <img src="{{item.image}}" alt="">
+                <p>{{item.add}}</p>
                 <p>{{item.price}}</p>
             </div>
             

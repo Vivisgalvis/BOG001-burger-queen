@@ -37,27 +37,27 @@
             "price": 10,
             "Additions":[
                 {
-                    "add1": "chesse",
+                    "add": "cheese",
                     "price": 1,
                     "image": "/assets/images/cheese.png"
                 },
                 {
-                    "add2": "egg",
+                    "add": "egg",
                     "price": 1,
                     "image": "/assets/images/Egg.png"
                 }
             ],
             "options":[
                 {
-                    "option1": "meet",
+                    "option": "meet",
                     "image": "/assets/images/meet.png"
                 },
                 {
-                    "option2": "chicken",
+                    "option": "chicken",
                     "image": "/assets/images/chicken.png"
                 },
                 {
-                    "option3": "veggie",
+                    "option": "veggie",
                     "image": "/assets/images/vegetarino.png"
                 }
             ]
