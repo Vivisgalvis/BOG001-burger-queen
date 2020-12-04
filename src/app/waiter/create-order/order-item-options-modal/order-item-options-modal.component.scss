@@ -1,0 +1,27 @@
+$color-orange:#FF9F00;
+$color-blackModal: #32383E;
+$color-red:#D0021B;
+
+
+.modal{
+    display: flex;
+    justify-content: center;
+    background-color: $color-blackModal;
+}
+
+button{
+    background-image: url(../../../../assets/images/xmodal.png);
+    width: 57px;
+    height: 57px;
+    background-color: rgba(240, 248, 255, 0);
+    border-color: rgba(240, 248, 255, 0);
+    background-repeat: no-repeat;
+    background-size: 97%; 
+    margin-top: 40px;
+    
+    a{
+        list-style: none;
+        color:rgba(128, 128, 128, 0);
+        font-size: 20px;
+    }
+}   
