@@ -1,5 +1,12 @@
 <div class="containerModal">
     <div class="modal">
+        <div *ngFor = "let product of data?.menu">
+            <div *ngFor = "let item of product.Additions" class="productTarget">
+                <p>{{item.name}}</p>
+                <p>{{item.price}}</p>
+            </div>
+            
+        </div>
         <div class="modalbox resize">
         <button type="button" (click) = "closeModal ('close')" id="close"> </button>
         </div>

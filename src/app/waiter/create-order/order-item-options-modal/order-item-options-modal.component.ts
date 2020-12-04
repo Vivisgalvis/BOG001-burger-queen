@@ -1,4 +1,6 @@
 import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
+import { DataService } from 'src/app/data.service';
+import { Menu } from 'src/app/interfaces/menu';
 //import { createSocket } from 'dgram';
 
 @Component({
@@ -8,11 +10,23 @@ import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
 })
 export class OrderItemOptionsModalComponent implements OnInit {
 
+  data:Menu;
+
+
 @Output() close = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
+
+    this.dataService.getData()
+    .subscribe((res:Menu) => {
+      this.data =res;
+      //data.menu se esta trayendo la data del json  
+    });
+    
   }
 
   closeModal(value){
