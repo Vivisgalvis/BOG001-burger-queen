@@ -1,11 +1,12 @@
 <div class="containerModal">
     <div class="modal">
-        
-        <div class="containerBurguer"> 
-            <img src="../../../../assets/images/doubleBurguer.png" alt="" class="burguer">
-        </div>
-        <div class="modalbox resize">
-            <button type="button" (click) = "closeModal ('close')" id="close"> </button>
+        <div class="containerHeader">
+            <!-- <div class="containerBurguer">  -->
+                <img src="../../../../assets/images/doubleBurguer.png" alt="" class="burguer">
+            <!-- </div> -->
+            <!-- <div class="modalbox resize"> -->
+                <button type="button" (click) = "closeModal ('close')" id="close"> </button>
+            <!-- </div> -->
         </div>
         <div class="containerTitles">
             <img src="../../../../assets/images/types.png" alt="">
@@ -16,21 +17,22 @@
                 <div *ngFor = "let item of product.options" class="productTarget" >
                     <img src="{{item.image}}" alt="">
                     <p>{{item.option}}</p>
-                    <input type="radio" id="huey" name="drone" value="{{item.option}}"checked>
+                    <input type="radio" id="optionRadio" name="drone" value="{{item.option}}">
                 </div>
             </div>
             <div class="containerAdd">
                 <div *ngFor = "let item of product.Additions" class="productTarget">
                     <img src="{{item.image}}" alt="">
-                    <p>{{item.add}}</p>
-                    <p>{{item.price}}</p>
-                    <input type="radio" id="huey" name="drone" value="{{item.add}}"checked>
+                    <p>{{item.add}} ${{item.price}}</p>
+                    <!-- <p> ${{item.price}}</p> -->
+                    <input type="checkbox" id="addCheck" name="drone" value="{{item.add}}">
                 </div>
+               
             </div>
 
         </div>
         <div class="buttonAdd">
-            <button id= "add">Add</button>
+             <button id= "add" >Add</button>
         </div>
         
     </div>
