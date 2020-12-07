@@ -29,6 +29,7 @@ main{
     display: flex; // recibe los valores de flexbox como flexdirection, justifyContent,alingItems,etc
     flex-direction: row;   
     width: 100%; 
+    justify-content: space-around;
 }
 .headerContainer{
     display: flex;
