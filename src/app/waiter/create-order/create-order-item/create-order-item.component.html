@@ -1,21 +1,25 @@
 <img src="/src/assets/images/chef.png" alt="">
 
 <div class="breakfast"> 
-    <div *ngFor = "let product of data?.menu"> <!--El signo ? indica que espera que se cargue la data para ejecutar el for es como un await--> 
-      <div *ngIf = "typeItem === product.typeFood" class="productTarget">
+    <div *ngFor = "let product of data?.menu"  > <!--El signo ? indica que espera que se cargue la data para ejecutar el for es como un await--> 
+      <div *ngIf = "typeItem === product.typeFood" class="productTarget" >
         <img src="{{product.image}}" alt="">
-        <span>
-          {{product.name}} 
-        </span>
-        <p> {{product.price}}</p>
+        <span>{{product.name}}</span>
+        <p>$ {{product.price}}</p>
         <span *ngIf = "simpleBurguer === product.name">
-          <button (click)="onSubmit('simple burguer')">ADD</button> 
+          <button (click) = "onSubmit('simple burguer')">ADD</button> 
         </span>
         <span *ngIf = "doubleBurguer === product.name">
-          <button (click)="onSubmit('double burguer')">ADD</button> 
+          <button (click) = "onSubmit('double burquer')">ADD</button> 
         </span>
-      </div>  
+
+        <div class="modalBurguer">
+         
+         </div>
+      </div> 
+       
     </div>
 
   
 </div>
+

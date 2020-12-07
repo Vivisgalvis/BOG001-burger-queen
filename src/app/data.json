@@ -37,18 +37,29 @@
             "price": 10,
             "Additions":[
                 {
-                    "add1": "chesse",
-                    "price": 1
+                    "add": "cheese",
+                    "price": 1,
+                    "image": "/assets/images/cheese.png"
                 },
                 {
-                    "add2": "egg",
-                    "price": 1
+                    "add": "egg",
+                    "price": 1,
+                    "image": "/assets/images/Egg.png"
                 }
             ],
             "options":[
-                "meet",
-                "chicken",
-                "veggie"
+                {
+                    "option": "meet",
+                    "image": "/assets/images/meet.png"
+                },
+                {
+                    "option": "chicken",
+                    "image": "/assets/images/chicken.png"
+                },
+                {
+                    "option": "veggie",
+                    "image": "/assets/images/vegetariano.png"
+                }
             ]
         },
         {
@@ -56,22 +67,7 @@
             "typeFood": "lunch",
             "image": "/assets/images/doubleBurguer.png",
             "name": "double burquer",
-            "price": 15,
-            "Additions":[
-                {
-                    "name": "chesse",
-                    "price": 1
-                },
-                {
-                    "name": "egg",
-                    "price": 1
-                }
-            ],
-            "options":[
-                "meet",
-                "chicken",
-                "veggie"
-            ]
+            "price": 15
         },
         {
             "id": "m7",
