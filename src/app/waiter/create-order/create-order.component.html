@@ -22,7 +22,7 @@
         </div>  
 
         <div id="containerChild">
-            <div id="orderItem"><app-create-order-item [typeItem]="type"></app-create-order-item></div>
+            <div id="orderItem"><app-create-order-item [typeItem]="type" (nameBurguer)="receiveBurguerSelected($event)"></app-create-order-item></div>
             <div id="orderSummary"><app-order-summary-component></app-order-summary-component></div>
         </div>
        

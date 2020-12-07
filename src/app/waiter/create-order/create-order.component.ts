@@ -26,5 +26,9 @@ export class CreateOrderComponent implements OnInit {
     this.type = this.route.snapshot.paramMap.get('type');
 
   }
+  receiveBurguerSelected(burguerSelected){
+    console.log(burguerSelected)
+
+  }
 }
 
