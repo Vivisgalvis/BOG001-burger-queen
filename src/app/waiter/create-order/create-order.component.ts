@@ -13,7 +13,7 @@ export class CreateOrderComponent implements OnInit {
   numberTable: string;
   nameDiner: string;
   type: string;
-  nameBurguer:string;
+  modalBurguer:boolean;
   showModal: boolean = false;
  // data:Menu;
 
@@ -30,17 +30,15 @@ export class CreateOrderComponent implements OnInit {
     this.numberTable = this.route.snapshot.paramMap.get('selectTables');
     this.nameDiner = this.route.snapshot.paramMap.get('name');
     this.type = this.route.snapshot.paramMap.get('type');
-
-    
   }
 
-  reciveBurguerSelected(burguerSelected){
-   this.showModal = true;
+  receiveveStateModalBurguer(stateModalBurguer){
+   this.showModal = stateModalBurguer;
   }
 
-  reciveCloseModal(value){
-    console.log(value)
+  receiveCloseModal(value){
     this.showModal = false;
   }
+  
 }
 
