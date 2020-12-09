@@ -15,7 +15,7 @@
                 <p>{{nameDiner}}</p>
                 
             </div> 
-            <p>{{nameBurguer}}</p>
+            <p>{{modalBurguer}}</p>
             <button type="button" id="backArrow"> 
                 <a routerLink = "/waiter/select-table">Back</a>
             </button>
@@ -23,7 +23,7 @@
         </div>  
 
         <div id="containerChild">
-            <div id="orderItem"><app-create-order-item [typeItem]="type" (nameBurguer)="reciveBurguerSelected($event)"></app-create-order-item></div>
+            <div id="orderItem"><app-create-order-item [typeItem]="type" (stateModalBurguer)="receiveveStateModalBurguer($event)"></app-create-order-item></div>
             <div id="orderSummary"><app-order-summary-component></app-order-summary-component></div>
         </div>
        
@@ -31,5 +31,5 @@
 
 </main>
 
-    <app-order-item-options-modal *ngIf= "showModal " (close)="reciveCloseModal($event)"></app-order-item-options-modal>
+    <app-order-item-options-modal *ngIf= "showModal " (close)="receiveCloseModal($event)"></app-order-item-options-modal>
 

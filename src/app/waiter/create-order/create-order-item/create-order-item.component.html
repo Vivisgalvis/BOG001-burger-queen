@@ -6,20 +6,13 @@
         <img src="{{product.image}}" alt="">
         <span>{{product.name}}</span>
         <p>$ {{product.price}}</p>
-        <span *ngIf = "simpleBurguer === product.name">
-          <button (click) = "onSubmit('simple burguer')">ADD</button> 
+        <span *ngIf = "product.Modal">
+          <button (click) = "onSubmit(product.Modal)">Options</button> 
         </span>
-        <span *ngIf = "doubleBurguer === product.name">
-          <button (click) = "onSubmit('double burquer')">ADD</button> 
+        <span *ngIf = "product.Modal != true">
+          <button>Add</button> 
         </span>
-
-        <div class="modalBurguer">
-         
-         </div>
-      </div> 
-       
+      </div>   
     </div>
-
-  
 </div>
 
