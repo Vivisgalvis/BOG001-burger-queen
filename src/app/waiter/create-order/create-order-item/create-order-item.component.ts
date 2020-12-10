@@ -1,7 +1,7 @@
 import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { Router } from '@angular/router';
-import { Menu } from 'src/app/interfaces/menu';
+import { ItemPedido, Menu } from 'src/app/interfaces/menu';
 
 @Component({
   selector: 'app-create-order-item',
@@ -11,9 +11,10 @@ import { Menu } from 'src/app/interfaces/menu';
 export class CreateOrderItemComponent implements OnInit {
   data:Menu;
   modalBurguer: boolean;
-
+  pedido:ItemPedido;
   @Input()typeItem: string; // el input es para pasar datos del papa al hijo. Estamos llamando Type
   @Output() stateModalBurguer = new EventEmitter<boolean>();
+  @Output() itemOrder = new EventEmitter<ItemPedido>();
 
 
 
@@ -41,5 +42,17 @@ export class CreateOrderItemComponent implements OnInit {
     this.stateModalBurguer.emit(this.modalBurguer)
     
     }
+
+    getItem(name:string, price:number, image:string){
+        this.pedido = {
+        "name":name,
+        "price":price,
+        "image":image
+      }
+      this.itemOrder.emit(this.pedido)
+      console.log(this.pedido)
+
+    }
+   
 
 }

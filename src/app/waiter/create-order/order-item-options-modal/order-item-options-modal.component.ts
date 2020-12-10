@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { Menu } from 'src/app/interfaces/menu';
+import { FormBuilder,FormGroup} from '@angular/forms';
 //import { createSocket } from 'dgram';
 
 @Component({
@@ -11,13 +12,18 @@ import { Menu } from 'src/app/interfaces/menu';
 export class OrderItemOptionsModalComponent implements OnInit {
 
   data:Menu;
-
+  modalSelections:any = {};
+  modalForm:FormGroup;
+  
 
 @Output() close = new EventEmitter<string>();
 
   constructor(
-    private dataService: DataService
-  ) { }
+    private dataService: DataService,
+    private formBuilder: FormBuilder
+  ) {
+    this.createForm();
+  }
 
   ngOnInit(): void {
 
@@ -27,6 +33,20 @@ export class OrderItemOptionsModalComponent implements OnInit {
       //data.menu se esta trayendo la data del json  
     });
     
+  }
+  createForm(){
+    this.modalForm = this.formBuilder.group({
+      optionTypeBurguer:'',
+      egg:'',
+      cheese:''
+
+    })
+  }
+  onSubmit(){
+    let infoModalTypeBurguer = this.modalForm.value
+  
+
+    console.log(infoModalTypeBurguer)
   }
 
   closeModal(value){
