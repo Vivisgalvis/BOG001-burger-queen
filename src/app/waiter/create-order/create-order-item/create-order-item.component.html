@@ -10,7 +10,7 @@
           <button (click) = "onSubmit(product.Modal)">Options</button> 
         </span>
         <span *ngIf = "product.Modal != true">
-          <button>Add</button> 
+          <button (click)= "getItem(product.name,product.price,product.image)" >Add</button> 
         </span>
       </div>   
     </div>

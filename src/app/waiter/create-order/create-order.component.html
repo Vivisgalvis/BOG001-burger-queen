@@ -23,8 +23,8 @@
         </div>  
 
         <div id="containerChild">
-            <div id="orderItem"><app-create-order-item [typeItem]="type" (stateModalBurguer)="receiveveStateModalBurguer($event)"></app-create-order-item></div>
-            <div id="orderSummary"><app-order-summary-component></app-order-summary-component></div>
+            <div id="orderItem"><app-create-order-item [typeItem]="type" (stateModalBurguer)="receiveveStateModalBurguer($event)" (itemOrder)="receiveItemOrder($event)"></app-create-order-item></div>
+            <div id="orderSummary"><app-order-summary-component [item]="receivedOrder"></app-order-summary-component></div>
         </div>
        
     </div>

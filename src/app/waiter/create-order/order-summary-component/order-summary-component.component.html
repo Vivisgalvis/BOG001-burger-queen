@@ -1,4 +1,11 @@
-<div id="containerSummary">
+<div id="containerSummary" >
+    <div>
+        <div *ngFor = "let abc of orderSummary">
+            <p>{{abc.name}}</p>
+        </div>
+
+    </div>
+    
 
     <div id="footSummary">
         <button>Send</button> 

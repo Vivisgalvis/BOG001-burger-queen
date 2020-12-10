@@ -33,6 +33,7 @@ export class SelectTableComponent implements OnInit {
     // Process checkout data here
     console.log(type)
     let infoTable = this.dinnerForm.value
+    console.log(infoTable)
     infoTable ["type"] = type;
     console.log("Your order has been submitted", infoTable);
     this.router.navigate(['/waiter/create-order', infoTable]);
