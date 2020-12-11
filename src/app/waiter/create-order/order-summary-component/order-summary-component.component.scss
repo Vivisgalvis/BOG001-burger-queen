@@ -3,47 +3,110 @@ $color-black:#000000;
 $color-mediumOrange:#FBA658; 
 
 #containerSummary{
-background-color:#fba758ab;
-width:375px;
-height:565px;
-border: $color-black solid 3px;
-border-radius:25px;
-margin-top:230px;   
-    #footSummary{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color:hsla(29, 95%, 66%, 0.671);
+    width:375px;
+    height:565px;
+    border: $color-black solid 3px;
+    border-radius:25px;
+    margin-top:230px; 
+    .containerTicket{
         display: flex;
-        justify-content: space-around;// space beteewn encia los elementos a una esquina a cada uno . Y el space around pone un espacio entre los hijos
-        width:100%;
-        height:70px;
-        margin-top: 480px;
-        //align-items: baseline;
-        button{
-            width:140px;
-            height:45px;
-            background-color:$color-orange;
-            border-radius:15px;
-            font-size:25px;
-        }
-        span{
-            display:flex;
-            justify-content:flex-end;
-            width: 160px;
-            height:45px;
-            align-items: center;
-            font-size:25px;
+        flex-flow: column wrap;
+        align-items: center;
+        width:375px;
+    }      
+}
+%buttonsStyle{
+    width: 35px;
+    height: 35px;
+    background-color:  rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    border-color: rgba(255, 255, 255, 0);
+}
+.ticket{
+    display: flex;
+    align-items: center;
+    width: 345px ;
+    height: 80px;
+    background-color: $color-mediumOrange;
+    border-radius:18px ;
+    margin-top:10px;
+    box-shadow: (10px 10px 5px rgba(0, 0, 0, 0.5  ));
+    img{
+        width: 61px;
+        height: 65px;
+        margin-left: 10px;
+    }
+    .containerInfoTicket{
+        display: flex;
+        flex-direction: column;
+        .containertext{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 10px;
+            width: 250px;
             p{
-                display: flex;
-                align-items: center;
-                width:80px;
-                height:45px;
-                background-color:#ffff;
-                font-size:25px;
-                margin-left:8px;
-                justify-content: center;
-                border-radius:15px;
-            }
-            
-
+                font-size: 20px;
+            }     
         }
+        .containerButtons{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-left: 10px;
+            width: 250px;
+            height: 35px;
+            #deleteButton{
+                @extend%buttonsStyle;   
+                background-image: url(../../../../assets/images/deleteIcon.png);
+            }
+            #editButton{
+                @extend%buttonsStyle;    
+                background-image: url(../../../../assets/images/editIcon.png);
+            }
+        }
+
+    }
+   
+} 
+#footSummary{
+    display: flex;
+    position: fixed;
+    // justify-content: space-around;// space beteewn encia los elementos a una esquina a cada uno . Y el space around pone un espacio entre los hijos
+    width: 340px ;
+    height:70px;
+    margin-top: 480px;
+    //align-items: baseline;
+    button{
+        width:140px;
+        height:45px;
+        background-color:$color-orange;
+        border-radius:15px;
+        font-size:25px;
+    }
+    span{
+        display:flex;
+        justify-content:flex-end;
+        width: 160px;
+        height:45px;
+        align-items: center;
+        font-size:25px;
+        p{
+            display: flex;
+            align-items: center;
+            width:80px;
+            height:45px;
+            background-color:#ffff;
+            font-size:25px;
+            margin-left:8px;
+            justify-content: center;
+            border-radius:15px;
+        }           
+
     }
 }
 

@@ -12,12 +12,16 @@
             <img src="../../../../assets/images/types.png" alt="">
             <img src="../../../../assets/images/additions.png" alt="">
         </div>
+        <form [formGroup] ="modalForm">
         <div *ngFor = "let product of data?.menu" class="containerTarget">
             <div class="containerOptions">
                 <div *ngFor = "let item of product.options" class="productTarget" >
                     <img src="{{item.image}}" alt="">
                     <p>{{item.option}}</p>
-                    <input type="radio" id="optionRadio" name="drone" value="{{item.option}}">
+                    
+                    <input type="radio" id="optionRadio" name="optionTypeBurguer" formControlName="optionTypeBurguer" [value]="item.option">
+                    
+      
                 </div>
             </div>
             <div class="containerAdd">
@@ -25,14 +29,15 @@
                     <img src="{{item.image}}" alt="">
                     <p>{{item.add}} ${{item.price}}</p>
                     <!-- <p> ${{item.price}}</p> -->
-                    <input type="checkbox" id="addCheck" name="drone" value="{{item.add}}">
+                        <input type="checkbox" id="addCheck" [name]="item.add" [formControlName]="item.add" [checked]="item.add" >                    
                 </div>
                
             </div>
 
         </div>
+        </form> 
         <div class="buttonAdd">
-             <button id= "add" (click) ="onSubmit(item)" type="button">Add</button>
+             <button id= "add" (click)="onSubmit()">Add</button>
         </div>
         
     </div>

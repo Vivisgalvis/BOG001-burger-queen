@@ -1,7 +1,7 @@
 import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { Menu } from 'src/app/interfaces/menu';
-import { StringDecoder } from 'string_decoder';
+import { FormBuilder,FormGroup} from '@angular/forms';
 //import { createSocket } from 'dgram';
 
 @Component({
@@ -12,15 +12,18 @@ import { StringDecoder } from 'string_decoder';
 export class OrderItemOptionsModalComponent implements OnInit {
 
   data:Menu;
- /*  modalSelection:any={};
-  optionRadio:String;
-  addCheck:String; */
+  modalSelections:any = {};
+  modalForm:FormGroup;
+  
 
 @Output() close = new EventEmitter<string>();
 
   constructor(
-    private dataService: DataService
-  ) { }
+    private dataService: DataService,
+    private formBuilder: FormBuilder
+  ) {
+    this.createForm();
+  }
 
   ngOnInit(): void {
 
@@ -31,15 +34,25 @@ export class OrderItemOptionsModalComponent implements OnInit {
     });
     
   }
+  createForm(){
+    this.modalForm = this.formBuilder.group({
+      optionTypeBurguer:'',
+      egg:false,
+      cheese:false
+    })
+  }
+  onSubmit(){
+    let infoModalTypeBurguer = this.modalForm.value
+  
 
-  closeModal(value){
+    console.log(infoModalTypeBurguer)
+  }
+
+  closeModal(value:string){
     this.close.emit(value);
     console.log(value)
   }
   
-  onSubmit(item){
-    console.log(value)
-  }
-  
+ 
   
 }
