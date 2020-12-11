@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { Menu } from 'src/app/interfaces/menu';
+import { StringDecoder } from 'string_decoder';
 //import { createSocket } from 'dgram';
 
 @Component({
@@ -11,7 +12,9 @@ import { Menu } from 'src/app/interfaces/menu';
 export class OrderItemOptionsModalComponent implements OnInit {
 
   data:Menu;
-
+ /*  modalSelection:any={};
+  optionRadio:String;
+  addCheck:String; */
 
 @Output() close = new EventEmitter<string>();
 
@@ -33,5 +36,10 @@ export class OrderItemOptionsModalComponent implements OnInit {
     this.close.emit(value);
     console.log(value)
   }
-
+  
+  onSubmit(item){
+    console.log(value)
+  }
+  
+  
 }
