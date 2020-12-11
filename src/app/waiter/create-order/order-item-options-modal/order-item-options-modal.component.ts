@@ -17,6 +17,7 @@ export class OrderItemOptionsModalComponent implements OnInit {
   
 
 @Output() close = new EventEmitter<string>();
+@Output() sendModalInfo = new EventEmitter<any>();
 
   constructor(
     private dataService: DataService,
@@ -43,6 +44,7 @@ export class OrderItemOptionsModalComponent implements OnInit {
   }
   onSubmit(){
     let infoModalTypeBurguer = this.modalForm.value
+    this.sendModalInfo.emit(infoModalTypeBurguer);
   
 
     console.log(infoModalTypeBurguer)
