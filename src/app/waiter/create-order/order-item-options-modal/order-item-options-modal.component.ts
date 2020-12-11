@@ -43,8 +43,6 @@ export class OrderItemOptionsModalComponent implements OnInit {
   }
   onSubmit(){
     let infoModalTypeBurguer = this.modalForm.value
-  
-
     console.log(infoModalTypeBurguer)
   }
 
