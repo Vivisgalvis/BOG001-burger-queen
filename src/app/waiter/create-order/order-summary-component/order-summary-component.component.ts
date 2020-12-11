@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { ItemPedido } from 'src/app/interfaces/menu';
+import { Menu, MenuItem } from 'src/app/interfaces/menu';
 
 @Component({
   selector: 'app-order-summary-component',
@@ -7,12 +7,11 @@ import { ItemPedido } from 'src/app/interfaces/menu';
   styleUrls: ['./order-summary-component.component.scss']
 })
 export class OrderSummaryComponentComponent implements OnInit {
-  @Input() item: ItemPedido;
   
+  @Input() item: MenuItem;
+  orderSummary:Menu[]=[];
   
-  orderSummary:any[]=[];
- 
-  constructor() {
+  constructor(){
     
    }
    ngOnChanges(changes: SimpleChanges){

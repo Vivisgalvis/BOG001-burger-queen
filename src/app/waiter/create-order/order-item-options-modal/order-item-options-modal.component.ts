@@ -37,9 +37,8 @@ export class OrderItemOptionsModalComponent implements OnInit {
   createForm(){
     this.modalForm = this.formBuilder.group({
       optionTypeBurguer:'',
-      egg:'',
-      cheese:''
-
+      egg:false,
+      cheese:false
     })
   }
   onSubmit(){
@@ -49,7 +48,7 @@ export class OrderItemOptionsModalComponent implements OnInit {
     console.log(infoModalTypeBurguer)
   }
 
-  closeModal(value){
+  closeModal(value:string){
     this.close.emit(value);
     console.log(value)
   }
